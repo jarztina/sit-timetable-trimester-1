@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Timetable</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- iOS home screen app behavior -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Timetable">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#191919">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <p class="app-title">SIT &middot; AY26/27 Semester 1</p>
+    <div class="legend" id="legend"></div>
+
+    <div class="monthnav">
+      <h1 id="monthLabel">August 2026</h1>
+      <div class="navbtns">
+        <button class="navbtn" id="prevBtn" aria-label="Previous month">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="navbtn" id="nextBtn" aria-label="Next month">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <button class="todaybtn" id="todayBtn">Today</button>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" data-view="month">Month</button>
+      <button class="tab" data-view="list">List</button>
+    </div>
+  </div>
+
+  <div id="monthView">
+    <div class="weekdays">
+      <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+    </div>
+    <div class="grid" id="grid"></div>
+
+    <div class="agenda">
+      <div class="agenda-heading">
+        <h2 id="agendaDate">Today</h2>
+        <span class="agenda-count" id="agendaCount"></span>
+      </div>
+      <div id="agendaList"></div>
+    </div>
+  </div>
+
+  <div id="listView" style="display:none;" class="list-view"></div>
+
+  <p class="footnote">Tap a course legend to filter &middot; add to Home Screen for quick access</p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
