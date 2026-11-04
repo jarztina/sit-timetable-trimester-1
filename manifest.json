@@ -1,7 +1,7 @@
 {
   "name": "SIT Timetable",
   "short_name": "Timetable",
-  "description": "AY26/27 Semester 1 class calendar",
+  "description": "AY26/27 Trimester 2 class calendar",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
